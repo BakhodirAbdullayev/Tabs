@@ -36,15 +36,17 @@ const Tabs = () => {
       <div className="heading">Experiences</div>
 
       <div className="jobs">
-        {/* btn conteiner */}
         <div className="btnContainer">
-          {jobs.map((item,index)=>(
-            <button key={item.id} onClick={()=> setValue(index)} className={`jobBtn ${index === value && 'activeBtn'}`} >
+          {jobs.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => setValue(index)}
+              className={`jobBtn ${index === value && "activeBtn"}`}
+            >
               {item.company}
             </button>
           ))}
         </div>
-        {/* job info */}
         <div className="jobInfo">
           <h3>{title}</h3>
           <h4>{company}</h4>
@@ -54,9 +56,7 @@ const Tabs = () => {
               <div className="icon">
                 <BsChevronDoubleRight />
               </div>
-              <div className="text">
-                {duty}
-              </div>
+              <div className="text">{duty}</div>
             </div>
           ))}
         </div>
